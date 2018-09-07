@@ -1,0 +1,98 @@
+body{
+    background-color: aqua; 
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+li{
+    display : inline;
+}
+
+/* class selector */
+.styleOne {
+	color: orangered;
+	font-style: italic;
+    text-align: center;	
+    font-size: 2em;
+    font-weight: bold;
+    background-color: aqua;
+    display : inline;
+}
+
+.imgCenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 25%;
+    padding: 1em;
+}
+
+.mainHeader{
+    color: deeppink;
+    text-align: center; 
+
+}
+
+.secondRow{
+    color: orangered;
+    text-align: left;
+}
+
+
+
+/*id selector*/
+#grey{
+    color: grey;
+    text-align: center;
+}
+
+#green{
+    color: green;
+    text-align: center;
+}
+
+#blue{
+    color: blue;
+    text-align: center;
+}
+
+#purple{
+    color: purple;
+    text-align: center;
+}
+
+#gold{
+    color:gold;
+    text-align: center;
+}
+
+#boldNoCenter{
+    color: deeppink;
+    font-weight: bold;
+}
+
+/*hovers*/
+p:hover {
+    color: goldenrod;
+}
+   
+/*links*/
+a:link {
+	color: gold;	
+}
+
+a:visited {
+	color:blue;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color:black;
+}

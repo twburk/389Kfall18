@@ -1,0 +1,38 @@
+@media screen and (max-width: 2500px) {
+    body {
+        background-color: beige;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: olive;
+        color: white;
+    }
+}
+
+b{
+    color: purple;
+}
+.center{
+    text-align: center;
+    color:purple;
+}
+
+/*links*/
+a:link {
+	color: gold;	
+}
+
+a:visited {
+	color:blue;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color:black;
+}

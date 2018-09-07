@@ -1,3 +1,112 @@
-<!-- We have purposely given you an empty file. We want you to get some practice with creating all the tags from the ground up.
- -->
+<!doctype html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <!-- For responsive page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Basic HTML5 Document" />
+        <meta name="keywords" content="HTML5, Responsive"/>
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <title>Project 1</title> 
+    </head>
+
+    <body>
+        <!--First Section. This is my paragraph that changes colors-->
+        <section>
+            <div class="styleOne">
+                <p>    
+                    This website will give you the basic information of the game Fortnite, <br/>
+                    and also give you my statistics/preferances.   
+                </p>
+            </div>
+        </section>
+    </br>
+        <section>
+    
+                    <h2 style="text-align: center; color: black;">Weapon Rarity Stats</h2>   
+                    <!--This is my table styled in bootstrap-->                                     
+                    <table class="center">
+                        <thead class="mainHeader">
+                            <tr>
+                                <th scope="col">Rarity Color</th>
+                                <th scope="col">Rarity Name</th>
+                                <th scope="col">Rarity Order</th>
+                                <th scope="col"># of Weapons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="grey">
+                                <th scope="row">Grey</th>
+                                <td>Common</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr id="green">
+                                <th scope="row">Green</th>
+                                <td>Uncommon</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr id="blue">
+                                <th scope="row">Blue</th>
+                                <td>Rare</td>
+                                <td>3</td>
+                                <td>5</td>
+                            </tr>
+                            <tr id="purple">
+                                <th scope="row">Purple</th>
+                                <td>Epic</td>
+                                <td>2</td>
+                                <td>5</td>
+                            </tr>
+                            <tr id="gold">
+                                <th scope="row">Gold</th>
+                                <td>Legendary</td>
+                                <td>1</td>
+                                <td>5</td>
+                        </tbody>
+                    </table>
+        </section>
+    </br>
+
+        <section>
+            <h1 class="mainHeader">My Character With the Most Wins</h1>
+            <img src="Raven.jpeg" alt="Raven" class="imgCenter">
+        </section>
+
+        <section>
+            <!--Nested List-->
+                <h2 class="secondRow"><a href="https://fortnitetracker.com/profile/psn/Twburk" title="">My Statistics</a></h2>
+                <ul id="boldNoCenter">
+                    <li>Solo
+                        <ul>
+                            <li>0 Wins;</li>
+                            <li>60 Kills;</li>
+                            <li>0.60 K/D</li>
+                        </ul>
+                    </li>
+                    <li>Duos
+                        <ul>
+                            <li>7 Wins;</li>
+                            <li>261 Kills;</li>
+                            <li>.59 K/D;</li>
+                        </ul>
+                    </li>
+                    <li>Squads
+                            <ul>
+                                <li>15 Wins;</li>
+                                <li>182 Kills;</li>
+                                <li>.57 K/D;</li>
+                            </ul>
+                    </li>
+                </ul>  
+        </section>
+
+        <section>
+            <h2 style="text-align: center"><a href="aboutMe.html" title="">About Me</a></h2>
+        </section>
+
+    </body>
+</html>
 
