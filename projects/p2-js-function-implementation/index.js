@@ -4,7 +4,7 @@
  */
 
 function helloWorld(){
-    throw new Error("unimplemented");
+    return "hello world";
 }
 
 /*
@@ -16,7 +16,9 @@ function helloWorld(){
  */
 
 function squareToString(num){
-    throw new Error("unimplemented");
+    let newNum = num * num;
+
+    return newNum.toString();
 }
 
 /*
@@ -27,7 +29,10 @@ function squareToString(num){
  */
 
 function reverseString(str){
-    throw new Error("unimplemented");
+    let arr = str.split("");
+    arr = arr.reverse();
+    let newStr = arr.join("");
+    return newStr;
 }
 
  /*
@@ -46,7 +51,23 @@ function reverseString(str){
   */
 
  function avgLenOfVals(dict){
-     throw new Error("unimplemented");
+
+    if(Object.keys(dict).length === 0){
+        return 0.0;
+    }else{
+
+        let arr = Object.values(dict);
+        let count = 0;
+        let sum = 0;
+
+        for(let i of arr){
+            let str = i.toString();
+            sum += str.length;
+            count++;
+        }
+
+        return sum/count;
+    }
  }
 
 /*
@@ -62,7 +83,10 @@ function reverseString(str){
  */
 
 function applyFunToArray(str, fun){
-    throw new Error("unimplemented");
+    let arr = str.split(/[ ,]+/);;
+    
+    return fun(arr);
+    
 }
 
 module.exports = {
