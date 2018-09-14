@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="http://thestamp.umd.edu/portals/0/Images/Shops%20and%20Services/terapinLogo.png" width="150px">
+        <h1>UMD Courses</h1>
+        <ul>
+            <li>
+                <a href="http://google.com">Home</a></li>
+            <li>
+                <a href="http://facebook.com">About</a>
+            </li>
+            <li>
+                <a href="#">Other</a>
+            </li>
+        </ul>
+    </header>
+    <article >
+        <h3>Search School Name:</h3>
+        <input id="school_field" type="text" placeholder="Ex: CMSC">
+        <button id="search_button">Search! </button>
+        <button id="clear"> Clear Results </button>
+        <article id="articles-container"></article>
+    </article>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script>
+        $("#search_button").on("click", function () {
+            var school = $("#school_field").val();
+            $.get("https://api.umd.io/v0/courses?dept_id=" + school, function (data) {
+
+                if (data.length == 0) {
+                    alert("Oops, can't find " + school);
+                } else {
+                    for (var i = 0; i < data.length; i++) {
+                        var currentClass = data[i];
+                        $("#articles-container").append("<article><h2>" + currentClass.course_id +
+                            " : " + currentClass.name + "</h2><p> " + currentClass.description +
+                            "</p></article>")
+                    }
+                }
+
+            });
+
+        });
+
+        $("#clear").on('click',function(){
+            $("#articles-container").empty();
+        });
+        
+
+        $("#school_field").on('keyup',function(){
+        });
+
+    </script>
+</body>
+
+</html>
