@@ -23,6 +23,8 @@ app.get('/', function(req, res) {
     /* For this endpoint, all you have to do is return the states, and
      * whatever information is necessary to link them to their own 
      * /state/:statename endpoint. */
+    var states = dataUtil.abvMap;
+    console.log(states);
     res.render('allstates', { error: 'unimplemented' });
 })
 

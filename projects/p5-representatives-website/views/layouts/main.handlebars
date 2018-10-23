@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/public/css/theme.css">
     <title>Explore US Representatives</title>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+			background-color: #111;
+		}
+
+		.active {
+			background-color: #4CAF50;
+		}
+</style>
 </head>
 
 <div class = 'nav'>
@@ -15,6 +44,12 @@
 	Also, feel free to go into public/css/ and add a 'nav' class to
 	the file.
 -->
+	<ul>
+	<li><a class="active" href="/">States</a></li>
+	<li><a href="/rep">Representatives</a></li>
+	<li><a href="/party/democrat">Democrats</a></li>
+	<li><a href="/party/republican">Republicans</a></li>
+	</ul>
 </div>
 
 <body>
