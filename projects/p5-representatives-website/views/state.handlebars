@@ -3,4 +3,18 @@ Here, you will need an if statement to check if there are even democrats or
 republicans for each state. Make sure that your endpoint in index.js passes in 
 values for you to successfully check in this template file.
 -->
+<h1>{{name}}</h1>
 
+{{#if containsReps}}
+    <h2>Republicans</h2>
+    {{#each RepReps}}
+        <p><a href="/rep/{{this.id}}">{{this.name}}</a></p>
+    {{/each}}
+{{/if}}
+
+{{#if containsDems}}
+    <h2>Democrats</h2>
+    {{#each DemReps}}
+        <p><a href="/rep/{{this.id}}">{{this.name}}</a></p>
+    {{/each}}
+{{/if}}

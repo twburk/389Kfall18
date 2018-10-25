@@ -66,6 +66,37 @@ function loadData() {
  * Make sure you add all new helper functions to the module.exports.
  */
 
+function getStates(){
+    const states = Object.keys(abvMap);
+    return states;
+}
+
+function getAbr(a){
+    return abvMap[a];
+}
+
+function getKey(a){
+    for(var key in abvMap){
+        if(abvMap[key] == a)
+            return key;
+    }
+}
+
+function hasWhiteSpace(s) {
+    if(s.indexOf(' ') >= 0)
+        return true;
+}
+
+function removeWhiteSpace(s){
+    var str = s.replace(/\s/g, "");
+    return str;
+}
+
 module.exports = {
     loadData: loadData,
+    getStates: getStates,
+    getAbr: getAbr,
+    getKey: getKey,
+    hasWhiteSpace: hasWhiteSpace,
+    removeWhiteSpace: removeWhiteSpace,
 }
