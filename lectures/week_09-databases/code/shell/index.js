@@ -7,6 +7,15 @@ var Movie = require('./models/Movie');
 // Load envirorment variables
 dotenv.load();
 
+console.log(process.env.MONGODB);
+
+//connect to sandbox
+mongoose.connect(process.env.MONGODB);
+mongoose.connection.on("error", function(err){
+    console.log("Connection was unable to take place");
+    process.exit(1);
+})
+
 // Setup Express App
 var app = express();
 app.use(bodyParser.json());
@@ -14,10 +23,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/movie', function(req, res) {
     // Create new movie
-
+    var movie = new Movie({
+        title: req.body.title,
+        genre: req.body.genre,
+        year: parseInt(req.body.year),
+        reviews: []
+    });
 
     // Save movie to database
-
+    movie.save(function(err){
+        if(err) throw err;
+        return res.send("Successfully inserted movie!");
+    })
 
 });
 
