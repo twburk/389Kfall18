@@ -1,0 +1,16 @@
+<h2>Activities by Group Count</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td><td>City</td><td>Age Requirement</td><td>Max Group</td>
+        </tr>
+    </thead>
+    {{#each activ}}
+        <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.city}}</td>
+                <td>{{this.ageRequirement}}</td>
+                <td>{{this.maxGroupCount}}</td>
+            </tr>
+    {{/each}}
+</table>

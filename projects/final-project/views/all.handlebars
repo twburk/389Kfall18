@@ -1,0 +1,37 @@
+<input type="search" id="search" placeholder="Activity Search">
+<div id="data">
+    <h2>Activities</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <td>Name</td><td>City</td><td>Age Requirement</td><td>Max Group</td><td>Dres Code</td>
+            </tr>
+        </thead>
+        {{#each activ}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.city}}</td>
+                <td>{{this.ageRequirement}}</td>
+                <td>{{this.maxGroupCount}}</td>
+                <td>{{this.dressCode}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+<script>
+    $('#search').on('keyup', function(e){
+        $('#data').html("");
+        var text = $(this).val();
+        var results = [];
+        var res_html = "";
+        App.activ.forEach(function(act){
+            if(act.name.substring(0, text.length) == text){
+                results.push(act);
+                res_html += "<li>" + act.name + "</li>";
+            }
+        });
+
+        $('#data').html("<ol>" + res_html + "</ol>");
+    });
+</script>
+

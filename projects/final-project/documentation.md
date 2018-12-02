@@ -1,11 +1,11 @@
 
-# PROJECT NAME
+# Maryland Activities
 
 ---
 
-Name: 
+Name: Travis Burk
 
-Date: 
+Date: 12/7/2018
 
 Project Topic: 
 
@@ -17,16 +17,28 @@ URL:
 ### 1. Data Format and Storage
 
 Data point fields:
-- `Field 1`:     ...       `Type: ...`
-- `Field 2`:     ...       `Type: ...`
-- `Field 3`:     ...       `Type: ...`
-- `Field 4`:     ...       `Type: ...`
-- `Field 5`:     ...       `Type: ...`
+- `Field 1`:     Name                 `Type: String`
+- `Field 2`:     City                 `Type: String`
+- `Field 3`:     ageRequirement       `Type: String`
+- `Field 4`:     maxGroupCount        `Type: Number`
+- `Field 5`:     dressCode            `Type: [String]`
 
 Schema: 
 ```javascript
 {
-   ...
+    name: {
+        type: String
+    },
+    city: {
+        type: String
+    },
+    ageRequirement: {
+        type: String
+    },
+    maxGroupCount:{
+        type: Number
+    },
+    dressCode: [String]
 }
 ```
 
@@ -60,18 +72,17 @@ request(options, function (error, response, body) {
 
 ### 3. View Data
 
-GET endpoint route: `/api/...`
+GET endpoint route: `/api/activity`
 
 ### 4. Search Data
 
-Search Field: ...
+Search Field: `name`
 
 ### 5. Navigation Pages
 
 Navigation Filters
-1. name -> `  route  `
-2. ... -> `  ...  `
-3. ... -> `  ...  `
-4. ... -> `  ...  `
-5. ... -> `  ...  `
-
+1. Baltimore Activities -> `/baltimore_activities`
+2. Age Restricted Activities -> `/restricted_activities`
+3. Non Age Restricted Activities-> `/notRestricted_activities`
+4. Alphabetical Activities -> `/activity_abc`
+5. Max Group Order -> `/group_activities`

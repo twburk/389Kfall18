@@ -9,21 +9,18 @@ dotenv.load();
 
 console.log(process.env.MONGODB);
 
-<<<<<<< HEAD
 //connect to sandbox
 mongoose.connect(process.env.MONGODB);
 mongoose.connection.on("error", function(err){
     console.log("Connection was unable to take place");
     process.exit(1);
 })
-=======
 // Connect to Sandbox MongoDB
 mongoose.connect(process.env.MONGODB);
 mongoose.connection.on('error',function(err){
     console.log("Connection was unable to take place");
     process.exit(1);
 });
->>>>>>> upstream/master
 
 // Setup Express App
 var app = express();
@@ -41,16 +38,9 @@ app.post('/movie', function(req, res) {
 
     // Save movie to database
     movie.save(function(err){
-<<<<<<< HEAD
         if(err) throw err;
         return res.send("Successfully inserted movie!");
-    })
-
-=======
-        if (err) throw err;
-        return res.send("Successfully inserted movie :)");
     });
->>>>>>> upstream/master
 });
 
 app.delete('/movie/:id', function(req, res) {

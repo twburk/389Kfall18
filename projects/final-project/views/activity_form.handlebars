@@ -1,0 +1,36 @@
+<form id="venue-form" action="/activity" method="post">
+    <h3>Create a New Activity</h3>
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" name="name" value=""></td>    
+        </tr>
+        <tr>
+            <td>City: </td>
+            <td><input type="text" name="city" value=""></td>    
+        </tr>
+        <tr>
+            <td>Age Requirement: </td>
+            <td>
+                <select form="venue-form" name="ageRequirement">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>  
+        </tr>
+        <tr>
+            <td>Max Group Amount: </td>
+            <td><input type="text" name="maxGroup" value=""></td>    
+        </tr>
+        <tr>
+            <td>Dress Code: </td>
+            <td><input type="text" name="dressCode" value=""></td> 
+            <td>Separate Each Dress Code With a ';'</td>   
+        </tr>
+        <tr>
+            <td colspan="2"><input id="submit" type="submit" value="SUBMIT"></td>
+        </tr>
+    </table>
+</form>
+
+

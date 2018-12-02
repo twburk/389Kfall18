@@ -1,1 +1,77 @@
 /* Please add your own! */
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: red;
+    color: wheat;
+}
+header{
+    margin-top: 0;
+    background-color: yellow;
+    color: red;
+}
+h1{
+    font-size: 45pt;
+    font-style: italic;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: center;
+}
+h2, h3{
+    text-align: center;
+}
+ol,ul{
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+thead{
+    font-weight: 900;
+}
+input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#search{
+    margin-left: 40%;
+    margin-right: auto;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10px;
+    font-size: 10pt;
+}
+.new-content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:  10px;
+    font-size: 15pt;
+}
+#submit{
+    float: right;
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid yellow;
+}
+#submit:hover{
+    color: green;
+    background-color: wheat;
+}
